@@ -1,5 +1,5 @@
 {% set name = "apd" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apd-{{ version }}.tar.gz
-  sha256: bd4e75b3474d8ee1916e95d37174e814d365c989d65c4ebf62a5a560065bc534
+  sha256: 624b207d0c6bf83401f9ac07ef64a6c93c0508e765277c99bbca5acbcaca9479
 
 build:
   number: 0
@@ -23,6 +23,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools-scm
   run:
     - beautifulsoup4
     - click
@@ -30,6 +31,7 @@ requirements:
     - python >=3.8
     - requests
     - requests-kerberos
+    - rich
 
 test:
   imports:
