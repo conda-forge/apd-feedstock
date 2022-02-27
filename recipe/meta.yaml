@@ -23,6 +23,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools-scm
   run:
     - beautifulsoup4
     - click
@@ -30,6 +31,7 @@ requirements:
     - python >=3.8
     - requests
     - requests-kerberos
+    - rich
 
 test:
   imports:
