@@ -1,6 +1,5 @@
 {% set name = "apd" %}
-{% set version = "0.2.1" %}
-
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,29 +7,27 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apd-{{ version }}.tar.gz
-  sha256: 624b207d0c6bf83401f9ac07ef64a6c93c0508e765277c99bbca5acbcaca9479
+  sha256: d187b4a810e5c527ae4d674ac9b4a06cf889b345737e5c16b1b74453317836cf
 
 build:
-  number: 0
   noarch: python
   entry_points:
     - apd-cache = apd.command:cmd_cache_ap_info
     - apd-list-pfns = apd.command:cmd_list_pfns
     - apd-list-samples = apd.command:cmd_list_samples
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
+    - python >=3.9
     - pip
-    - python >=3.8
     - setuptools-scm
   run:
-    - beautifulsoup4
+    - python >=3.9
+    - requests
     - click
     - click-log
-    - python >=3.8
-    - requests
-    - requests-kerberos
     - rich
 
 test:
