@@ -1,5 +1,5 @@
 {% set name = "apd" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,17 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apd-{{ version }}.tar.gz
-  sha256: d187b4a810e5c527ae4d674ac9b4a06cf889b345737e5c16b1b74453317836cf
+  sha256: da5b21ef59b2cd0c12ff68c7cd6b17abd66475e982c08e8bc4ba1a0bdfc4ad7e
 
 build:
   noarch: python
   entry_points:
+    - apd-login = apd.command:cmd_login
+    - apd-logout = apd.command:cmd_logout
     - apd-cache = apd.command:cmd_cache_ap_info
     - apd-list-pfns = apd.command:cmd_list_pfns
     - apd-list-samples = apd.command:cmd_list_samples
+    - apd-summary = apd.command:cmd_summary
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
