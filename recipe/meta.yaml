@@ -39,7 +39,7 @@ test:
     - apd
   commands:
     - pip check
-    - apd-cache --help
+    - apd-cache-info --help
     - apd-list-pfns --help
     - apd-list-samples --help
   requires:
