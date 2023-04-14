@@ -1,13 +1,13 @@
-About apd
-=========
-
-Home: https://pypi.org/project/apd/
-
-Package license: GPL-3.0
+About apd-feedstock
+===================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/apd-feedstock/blob/main/LICENSE.txt)
 
-Summary: Tool to access the Analysis production Data
+Home: https://pypi.org/project/apd/
+
+Package license: GPL-3.0-only
+
+Summary: Tool to access the LHCb Analysis production Data
 
 Current build status
 ====================
@@ -143,5 +143,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@chrisburr](https://github.com/chrisburr/)
+* [@bcouturi](https://github.com/bcouturi/)
 
