@@ -1,5 +1,5 @@
 {% set name = "apd" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apd-{{ version }}.tar.gz
-  sha256: 3624125a188b62e68f0ecaabbdd38ef63ac58ca9f6f05c2f51df90cd19c2e2ac
+  sha256: 7c52d2eac2719dc8c06997b72422950950a5c10f8566578999085c306a4697f4
 
 build:
   noarch: python
