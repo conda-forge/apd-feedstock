@@ -1,5 +1,5 @@
 {% set name = "apd" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apd-{{ version }}.tar.gz
-  sha256: 1eb641f46e2f1a5420a94114520f10ccceba5e3f3c1c6f7f587b1c4f044d2ef8
+  sha256: 6ccc1384babf451d460f23e8589c9f8c42ea7957be6d7341910a497b9115e453
 
 build:
   noarch: python
@@ -25,8 +25,10 @@ build:
 requirements:
   host:
     - python >=3.9
+    - setuptools >=42
+    - wheel
+    - setuptools-scm >=3.4
     - pip
-    - setuptools-scm
   run:
     - python >=3.9
     - requests
