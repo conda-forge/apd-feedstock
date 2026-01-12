@@ -1,5 +1,5 @@
 {% set name = "apd" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apd-{{ version }}.tar.gz
-  sha256: 6ccc1384babf451d460f23e8589c9f8c42ea7957be6d7341910a497b9115e453
+  sha256: b9a414827f5306a13239f969e9da9cb2baa80046b1d26b05fe523f63e3335843
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ build:
     - apd-summary = apd.command:cmd_summary
     - apd-cache-pfns = apd.command:cmd_cache_pfns
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
